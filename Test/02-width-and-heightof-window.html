@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>width and height values on changing window resize</title>
 </head>
-<body>
+<body onresize="showSize()">
     <script>
         function showSize() {
             const minDiv = document.createElement('div');
             let showEle = document.getElementsByTagName('body')[0];
 
-            const eleWidth = document.documentElement.clientWidth;
-            const eleHeight = document.documentElement.clientHeight;
+            const eleWidth = window.innerWidth;
+            const eleHeight = window.innerHeight;
                     
             showEle.innerHTML = `Width: ${eleWidth} and  Height: ${eleHeight}`;
         }
-        showSize();
     </script>
 </body>
 </html>
