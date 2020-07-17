@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Largest word of string</title>
+</head>
+<body>
+    <script>
+
+        function largestString(string){
+            const minDiv = document.createElement('div');
+            let showEle = document.getElementsByTagName('body')[0];
+
+                var longestWord = string.split(' ').sort(function(a,b){
+                    return b.length - a.length;
+                });
+            showEle.innerHTML = longestWord[0];
+            }
+
+            largestString('Web Development Tutorial ');
+    </script>
+</body>
+</html>

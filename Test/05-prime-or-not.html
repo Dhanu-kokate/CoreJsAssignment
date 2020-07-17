@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Given  no is prime or not</title>
+</head>
+<body>
+    <script>
+
+        const minDiv = document.createElement('div');
+        let showEle = document.getElementsByTagName('body')[0];
+
+        function isPrime(num) { 
+
+            for(var i = 2; i < num; i++)
+                if(num % i === 0) return false;
+            return num > 1;
+            }
+        showEle.innerHTML =`Give no is Prime:  ${isPrime(2)}`;
+    </script>
+</body>
+</html>

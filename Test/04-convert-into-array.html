@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript split string into array </title>
+</head>
+<body>
+    <script>
+        function string_to_array(data){
+
+            const minDiv = document.createElement('div');
+            let showEle = document.getElementsByTagName('body')[0];
+
+            let stringArray = [];
+            let word = data.split(' ');
+            stringArray.push(word);
+            showEle.innerHTML = stringArray;
+           }
+           string_to_array('Robin Singh') ;
+    </script>
+</body>
+</html>

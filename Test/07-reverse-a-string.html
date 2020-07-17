@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Reverse Data</title>
+</head>
+<body>
+    <script>
+        const minDiv = document.createElement('div');
+        let showEle = document.getElementsByTagName('body')[0];
+
+        let defaultData = [3, 2, 2, 4, 3];
+        let reverseData = defaultData.length;
+        let reverseArray = [];
+
+        // for (i = 0; i < defaultData.length; i++) {
+        //     showData = defaultData[reverseData - 1]
+        //     reverseArray.push(showData)
+        //     showData = '';
+        //     reverseData = reverseData - 1;
+        // }
+
+
+        for(let data of defaultData){
+            let showData = '';
+            showData = defaultData[reverseData - 1];
+            reverseArray.push(showData);
+            showData = '';
+            reverseData = reverseData - 1;
+        }
+
+        showEle.innerHTML = `Reverse Data: ${reverseArray}`;
+    </script>
+</body>
+</html>

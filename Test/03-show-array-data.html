@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Array Data </title>
+</head>
+<body>
+    
+    <script>
+
+        function defaultArray(){
+            
+        const minDiv = document.createElement('div');
+        let showEle = document.getElementsByTagName('body')[0];
+
+        const library = [
+            {
+                author: 'Bill Gates', 
+                title: 'The Road Ahead', 
+                readingStatus: true
+            },
+            {
+                author: 'Steve Jobs', 
+                title: 'Walter Isaacson', 
+                readingStatus: true
+            },
+            {
+                author: 'Suzanne Collins', 
+                title: 'Mockingjay: The Final BooK of The Hunger Games', 
+                readingStatus: false
+            }];
+
+
+            /*for (i = 0; i < library.length; i++){
+                showEle.innerHTML += `Author: ${library[i].author} Title:${library[i].title} ReadingStatus: ${library[i].readingStatus}<br/>`;
+                }*/
+            
+            for (var i = 0; i < library.length; i++) {
+                
+                for (item in library[i]) {
+                    showEle.innerHTML += `${item} : ${library[i][item]} `;
+                }
+                showEle.innerHTML += "<br/>";
+            }
+
+        }
+
+    defaultArray();  
+    </script>
+</body>
+</html>

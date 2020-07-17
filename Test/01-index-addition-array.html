@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array sum</title>
+</head>
+<body>
+    <script>
+        const array1 = [1,0,2,3,4];
+        const array2 = [3,5,6,7,8,13];
+        var total = [],undefined;
+  
+        function addEle(){
+
+        debugger;
+            for(let i=0; i<arguments.length; i++){
+                //console.log(arguments);
+                for(let j=0; j<arguments[i].length; j++){
+                    // array 
+                    //console.log(arguments[i][j])
+                    total[j]  = (total[j] == undefined ? 0: total[j]) + arguments[i][j];
+                }
+            //console.log(total);return false;
+            }
+            return total;
+            }
+  
+        console.log(addEle(array1,array2));
+      </script>
+</body>
+</html>
