@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>width and height values on changing window resize</title>
+    <title>Assignment 2</title>
 </head>
-<body onresize="showSize()">
-    <script>
-        function showSize() {
-            const minDiv = document.createElement('div');
-            let showEle = document.getElementsByTagName('body')[0];
+<body>
+    <!-- 2. Write a JavaScript program to get the width and height of the window (any time the window is resized). -->
 
-            const eleWidth = window.innerWidth;
-            const eleHeight = window.innerHeight;
-                    
-            showEle.innerHTML = `Width: ${eleWidth} and  Height: ${eleHeight}`;
-        }
+    <script>
+        function resizeWin(){
+            window.addEventListener('resize', function(){
+                alert(` Window width: ${window.innerWidth}, Window Height ${window.innerHeight}`);
+            });
+
+        } 
+        resizeWin();
     </script>
 </body>
 </html>
