@@ -3,50 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show Array Data </title>
+    <title>Assignment 3</title>
+    <style>
+        table,th,td{
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
     
+    <!-- 3. Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books.
+
+    var library = [ 
+    {
+        author: 'Bill Gates',
+        title: 'The Road Ahead',
+        readingStatus: true
+    },
+    {
+        author: 'Steve Jobs',
+        title: 'Walter Isaacson',
+        readingStatus: true
+    },
+    {
+        author: 'Suzanne Collins',
+        title:  'Mockingjay: The Final Book of The Hunger Games', 
+        readingStatus: false
+    }]; -->
+
+    <table id="table">
+        <tr>
+            <th>Author</th>
+            <th>Title</th>
+            <th>Reading Status</th>
+        <tr>
+    </table>
+
     <script>
 
-        function defaultArray(){
+        function showData(){
             
-        const minDiv = document.createElement('div');
-        let showEle = document.getElementsByTagName('body')[0];
+            let library = [{
+                    author: 'Bill Gates',
+                    title: 'The Road Ahead',
+                    readingStatus: true
+                },
+                {
+                    author: 'Steve Jobs',
+                    title: 'Walter Isaacson',
+                    readingStatus: true
+                },
+                {
+                    author: 'Suzanne Collins',
+                    title:  'Mockingjay: The Final Book of The Hunger Games', 
+                    readingStatus: false
+                }];
 
-        const library = [
-            {
-                author: 'Bill Gates', 
-                title: 'The Road Ahead', 
-                readingStatus: true
-            },
-            {
-                author: 'Steve Jobs', 
-                title: 'Walter Isaacson', 
-                readingStatus: true
-            },
-            {
-                author: 'Suzanne Collins', 
-                title: 'Mockingjay: The Final BooK of The Hunger Games', 
-                readingStatus: false
-            }];
-
-
-            /*for (i = 0; i < library.length; i++){
-                showEle.innerHTML += `Author: ${library[i].author} Title:${library[i].title} ReadingStatus: ${library[i].readingStatus}<br/>`;
-                }*/
-            
-            for (var i = 0; i < library.length; i++) {
-                
-                for (item in library[i]) {
-                    showEle.innerHTML += `${item} : ${library[i][item]} `;
+                for (let data of library){
+                    document.getElementById('table').innerHTML += `<tr><td>${data.author}</td><td>${data.title}</td><td>${data.readingStatus}</td></tr>`; 
                 }
-                showEle.innerHTML += "<br/>";
-            }
-
         }
 
-    defaultArray();  
+        showData();
     </script>
 </body>
 </html>
