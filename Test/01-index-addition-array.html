@@ -3,30 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>array sum</title>
+    <title>Assignment 1</title>
 </head>
 <body>
-    <script>
-        let array1 = [1,0,2,3,4];
-        let array2 = [3,5,6,7,8,13];
-        var total = [],undefined;
-  
-        function addEle(){
 
-        debugger;
-            for(let i=0; i<arguments.length; i++){
-                //console.log(arguments);
-                for(let j=0; j<arguments[i].length; j++){
-                    // array 
-                    //console.log(arguments[i][j])
-                    total[j]  = (total[j] == undefined ? 0: total[j]) + arguments[i][j];
+    <!-- 1. There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays. 
+    Sample array :
+    array1 = [1,0,2,3,4];
+    array2 = [3,5,6,7,8,13];
+    Expected Output :
+    [4, 5, 8, 10, 12, 13] -->
+
+    <input type="text" placeholder="Enter your First Value" id="first">
+    <input type="text" placeholder="Enter your Second Value" id="second">
+    <button onclick="addArray()">Addition</button>
+
+    <script>
+
+        function addArray(){
+            let first = document.getElementById('first').value;
+            let second =document.getElementById('second').value;
+
+            let array1 = first.split(',');
+            let array2 = second.split(',');
+
+            total = [];
+
+            let len = array1.length > array2.length ? array1.length : array2.length;
+            
+            for (let i = 0; i < len; i++){
+                
+                if(array1[i] && array2[i]){
+                    total.push(array1[i]*1 + array2[i]*1);
+                    
+                }else if(array1[i]){
+                    total.push(array1[i]*1);
+                    
+                }else if(array2[i]){
+                    total.push(array2[i]*1);
+                    
                 }
-            //console.log(total);return false;
             }
-            return total;
-            }
-  
-        console.log(addEle(array1,array2));
-      </script>
+            console.log(total);
+        }
+    </script>
 </body>
 </html>
